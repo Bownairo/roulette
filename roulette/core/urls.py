@@ -4,9 +4,9 @@ from .views import LanguageListView, LanguageDetailView, IdeaListView, IdeaDetai
 
 urlpatterns = [
     path('languages/', LanguageListView.as_view()),
-    path('<int:pk>/', LanguageDetailView.as_view()),
+    path('languages/<int:pk>/', LanguageDetailView.as_view()),
     path('ideas/', IdeaListView.as_view()),
-    path('<int:pk>/', IdeaDetailView.as_view()),
+    path('ideas/<int:pk>/', IdeaDetailView.as_view()),
     path('projects/', ProjectListView.as_view()),
     path('projects/<int:pk>/', ProjectDetailView.as_view()),
 ]
