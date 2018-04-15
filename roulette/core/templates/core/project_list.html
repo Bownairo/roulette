@@ -1,0 +1,7 @@
+<ul>
+{% for project in project_list %}
+    <li><a href="/core/projects/{{ project.id }}/">{{ project.name }}</a></li>
+{% empty %}
+    <li>No projects.</li>
+{% endfor %}
+</ul>
