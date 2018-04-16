@@ -6,8 +6,8 @@ from django.urls import reverse
 class Language(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
-    thumbnail = models.ImageField()
-    url = models.URLField()
+    thumbnail = models.ImageField(blank=True)
+    url = models.URLField(blank=True)
 
     def get_absolute_url(self):
         return reverse('core:language', kwargs={'pk':self.pk})
@@ -15,8 +15,8 @@ class Language(models.Model):
 class Idea(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
-    thumbnail = models.ImageField()
-    url = models.URLField()
+    thumbnail = models.ImageField(blank=True)
+    url = models.URLField(blank=True)
 
     def get_absolute_url(self):
         return reverse('core:idea', kwargs={'pk':self.pk})
