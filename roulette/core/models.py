@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 class Language(models.Model):
@@ -9,7 +10,7 @@ class Language(models.Model):
     url = models.URLField()
 
     def get_absolute_url(self):
-        return reverse('language-detail', kwargs={'pk':self.pk})
+        return reverse('core:language', kwargs={'pk':self.pk})
 
 class Idea(models.Model):
     name = models.CharField(max_length=30)
@@ -18,7 +19,7 @@ class Idea(models.Model):
     url = models.URLField()
 
     def get_absolute_url(self):
-        return reverse('idea-detail', kwargs={'pk':self.pk})
+        return reverse('core:idea', kwargs={'pk':self.pk})
 
 class Project(models.Model):
     name = models.CharField(max_length=30)
@@ -29,4 +30,4 @@ class Project(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
-        return reverse('project-detail', kwargs={'pk':self.pk})
+        return reverse('core:project', kwargs={'pk':self.pk})
