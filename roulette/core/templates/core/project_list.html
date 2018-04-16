@@ -1,3 +1,10 @@
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% bootstrap_messages %}
+
 <ul>
 {% for project in project_list %}
     <li><a href="{% url 'core:project' project.id %}">{{ project.name }}</a></li>

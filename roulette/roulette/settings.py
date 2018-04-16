@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['192.168.1.69']
 
 INSTALLED_APPS = [
     'core.apps.CoreConfig',
+    'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

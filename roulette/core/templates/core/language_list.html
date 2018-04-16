@@ -1,3 +1,10 @@
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% bootstrap_messages %}
+
 <ul>
 {% for language in language_list %}
     <li><a href="{% url 'core:language' language.id %}">{{ language.name }}</a></li>
