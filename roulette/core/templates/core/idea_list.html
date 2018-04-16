@@ -6,7 +6,9 @@
 {% bootstrap_messages %}
 
 {% url 'core:index' as back %}
+{% url 'core:idea-add' as add %}
 {% bootstrap_button content='Back' button_type='link' href=back %}
+{% bootstrap_button content='Add' button_type='link' href=add %}
 
 <ul>
 {% for idea in idea_list %}
