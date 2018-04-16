@@ -27,7 +27,7 @@ class Project(models.Model):
     github_url = models.URLField()
     language = models.ForeignKey(Language, null=True, on_delete=models.SET_NULL)
     idea = models.ForeignKey(Idea, null=True, on_delete=models.SET_NULL)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    #user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse('core:project', kwargs={'pk':self.pk})

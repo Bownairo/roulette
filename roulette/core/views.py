@@ -49,7 +49,7 @@ class ProjectDetailView(generic.DetailView):
 
 class ProjectCreateView(generic.edit.CreateView):
     model = Project
-    fields = '__all__'
+    fields = ['name', 'description', 'github_url', 'language', 'idea']
 
 class ProjectUpdateView(generic.edit.UpdateView):
     model = Project
