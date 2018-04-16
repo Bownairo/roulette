@@ -13,4 +13,6 @@
 {% bootstrap_button content='Delete' button_type='link' href=delete %}
 
 <h1>{{ language.name }}</h1>
+{% if language.thumbnail %}
 <img src="{{ language.thumbnail.url }}">
+{% endif %}
