@@ -21,7 +21,7 @@ class LanguageUpdateView(generic.edit.UpdateView):
 
 class LanguageDeleteView(generic.edit.DeleteView):
     model = Language
-    success_url = reverse_lazy('language-list')
+    success_url = reverse_lazy('core:languages')
 
 class IdeaListView(generic.ListView):
     model = Idea
@@ -39,7 +39,7 @@ class IdeaUpdateView(generic.edit.UpdateView):
 
 class IdeaDeleteView(generic.edit.DeleteView):
     model = Idea
-    success_url = reverse_lazy('idea-list')
+    success_url = reverse_lazy('core:ideas')
 
 class ProjectListView(generic.ListView):
     model = Project
@@ -57,4 +57,4 @@ class ProjectUpdateView(generic.edit.UpdateView):
 
 class ProjectDeleteView(generic.edit.DeleteView):
     model = Project
-    success_url = reverse_lazy('project-list')
+    success_url = reverse_lazy('core:projects')
