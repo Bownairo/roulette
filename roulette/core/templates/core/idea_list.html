@@ -1,6 +1,6 @@
 <ul>
 {% for idea in idea_list %}
-    <li><a href="/core/ideas/{{ idea.id }}/">{{ idea.name }}</a></li>
+    <li><a href="{% url 'core:idea' idea.id %}"/>{{ idea.name }}</a></li>
 {% empty %}
     <li>No ideas.</li>
 {% endfor %}

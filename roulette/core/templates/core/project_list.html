@@ -1,6 +1,6 @@
 <ul>
 {% for project in project_list %}
-    <li><a href="/core/projects/{{ project.id }}/">{{ project.name }}</a></li>
+    <li><a href="{% url 'core:project' project.id %}">{{ project.name }}</a></li>
 {% empty %}
     <li>No projects.</li>
 {% endfor %}
