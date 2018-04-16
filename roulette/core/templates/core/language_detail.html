@@ -6,11 +6,11 @@
 {% bootstrap_messages %}
 
 {% url 'core:languages' as back %}
-{% url 'core:language-update' as back %}
-{% url 'core:language-delete' as delete %}
+{% url 'core:language-update' language.id as update %}
+{% url 'core:language-delete' language.id as delete %}
 {% bootstrap_button content='Back' button_type='link' href=back %}
 {% bootstrap_button content='Update' button_type='link' href=update %}
-{% bootstrap_button content='Delete' button_type='link' href=update %}
+{% bootstrap_button content='Delete' button_type='link' href=delete %}
 
 <h1>{{ language.name }}</h1>
 <img src="{{ language.thumbnail.url }}">
