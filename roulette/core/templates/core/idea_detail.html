@@ -5,5 +5,9 @@
 
 {% bootstrap_messages %}
 
+
+{% url 'core:ideas' as back %}
+{% bootstrap_button content='Back' button_type='link' href=back %}
+
 <h1>{{ idea.name }}</h1>
 <img src="{{ idea.thumbnail.url }}">

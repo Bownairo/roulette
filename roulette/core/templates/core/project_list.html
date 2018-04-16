@@ -5,6 +5,9 @@
 
 {% bootstrap_messages %}
 
+{% url 'core:index' as back %}
+{% bootstrap_button content='Back' button_type='link' href=back %}
+
 <ul>
 {% for project in project_list %}
     <li><a href="{% url 'core:project' project.id %}">{{ project.name }}</a></li>

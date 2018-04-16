@@ -6,3 +6,11 @@
 {% bootstrap_messages %}
 
 <h1>Home</h1>
+
+{% url 'core:languages' as languages %}
+{% url 'core:ideas' as ideas %}
+{% url 'core:projects' as projects %}
+
+{% bootstrap_button content='Languages' button_type='link' href=languages %}
+{% bootstrap_button content='Ideas' button_type='link' href=ideas %}
+{% bootstrap_button content='Projects' button_type='link' href=projects %}

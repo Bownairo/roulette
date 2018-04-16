@@ -5,6 +5,9 @@
 
 {% bootstrap_messages %}
 
+{% url 'core:index' as back %}
+{% bootstrap_button content='Back' button_type='link' href=back %}
+
 <ul>
 {% for idea in idea_list %}
     <li><a href="{% url 'core:idea' idea.id %}"/>{{ idea.name }}</a></li>

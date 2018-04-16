@@ -5,4 +5,7 @@
 
 {% bootstrap_messages %}
 
+{% url 'core:projects' as back %}
+{% bootstrap_button content='Back' button_type='link' href=back %}
+
 <h1>{{ project.name }}</h1>

@@ -5,5 +5,8 @@
 
 {% bootstrap_messages %}
 
+{% url 'core:languages' as back %}
+{% bootstrap_button content='Back' button_type='link' href=back %}
+
 <h1>{{ language.name }}</h1>
 <img src="{{ language.thumbnail.url }}">
