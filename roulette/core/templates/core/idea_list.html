@@ -10,10 +10,10 @@
 {% bootstrap_button content='Back' button_type='link' href=back %}
 {% bootstrap_button content='Add' button_type='link' href=add %}
 
-<ul>
+<div class="list-group">
 {% for idea in idea_list %}
-    <li><a href="{% url 'core:idea' idea.id %}"/>{{ idea.name }}</a></li>
+    <a class="list-group-item" href="{% url 'core:idea' idea.id %}"/>{% if idea.thumbnail %}<img src="{{ idea.thumbnail.url }}" alt="thumb" height="100" width="100" class="img-thumbnail">{% endif %} {{ idea.name }}</a>
 {% empty %}
-    <li>No ideas.</li>
+    <div>No ideas.</div>
 {% endfor %}
-</ul>
+</div>
