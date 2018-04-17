@@ -19,7 +19,7 @@
         <div class="col">
             <a href={% url 'core:idea' project.idea.id %}>
                 {% if project.idea.thumbnail %}
-                <img src="{{ project.idea.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
+                <img src="{{ project.idea.thumbnail.url }}" alt="thumb" height="500" width="500" class="rounded">
                 {% else %}
                 <font size="400">{{ project.idea.name }}</font>
                 {% endif %}
@@ -31,7 +31,7 @@
         <div class="col">
             <a href={% url 'core:language' project.language.id %}>
                 {% if project.language.thumbnail %}
-                <img src="{{ project.language.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
+                <img src="{{ project.language.thumbnail.url }}" alt="thumb" height="500" width="500" class="rounded">
                 {% else %}
                 <font size="400">{{ project.language.name }}</font>
                 {% endif %}
