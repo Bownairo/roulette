@@ -19,6 +19,6 @@ urlpatterns = [
     path('projects/', ProjectListView.as_view(), name='projects'),
     path('projects/<int:pk>/', ProjectDetailView.as_view(), name='project'),
     path('projects/create/', ProjectCreateView.as_view(template_name='core/form.html'), name='project-add'),
-    path('projects/update/<int:pk>/', IdeaUpdateView.as_view(template_name='core/form.html'), name='project-update'),
-    path('projects/delete/<int:pk>/', IdeaDeleteView.as_view(template_name='core/delete.html'), name='project-delete'),
+    path('projects/update/<int:pk>/', ProjectUpdateView.as_view(template_name='core/form.html'), name='project-update'),
+    path('projects/delete/<int:pk>/', ProjectDeleteView.as_view(template_name='core/delete.html'), name='project-delete'),
 ]
