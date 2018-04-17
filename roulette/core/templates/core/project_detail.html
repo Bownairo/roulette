@@ -17,17 +17,25 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            {% if project.idea.thumbnail %}
-            <img src="{{ project.idea.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
-            {% endif %}
+            <a href={% url 'core:idea' project.idea.id %}>
+                {% if project.idea.thumbnail %}
+                <img src="{{ project.idea.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
+                {% else %}
+                <font size="400">{{ project.idea.name }}</font>
+                {% endif %}
+            </a>
         </div>
         <div class="col-1">
             <font size="400">+</font>
         </div>
         <div class="col">
-            {% if project.language.thumbnail %}
-            <img src="{{ project.language.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
-            {% endif %}
+            <a href={% url 'core:language' project.language.id %}>
+                {% if project.language.thumbnail %}
+                <img src="{{ project.language.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
+                {% else %}
+                <font size="400">{{ project.language.name }}</font>
+                {% endif %}
+            </a>
         </div>
     </div>
 </div>
