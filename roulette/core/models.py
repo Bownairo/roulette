@@ -12,6 +12,9 @@ class Language(models.Model):
     def get_absolute_url(self):
         return reverse('core:language', kwargs={'pk':self.pk})
 
+    def __str__(self):
+        return self.name
+
 class Idea(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
@@ -20,6 +23,9 @@ class Idea(models.Model):
 
     def get_absolute_url(self):
         return reverse('core:idea', kwargs={'pk':self.pk})
+
+    def __str__(self):
+        return self.name
 
 class Project(models.Model):
     name = models.CharField(max_length=30)
@@ -31,3 +37,6 @@ class Project(models.Model):
 
     def get_absolute_url(self):
         return reverse('core:project', kwargs={'pk':self.pk})
+
+    def __str__(self):
+        return self.name
