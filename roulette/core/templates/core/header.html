@@ -22,9 +22,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="{% url 'core:languages' %}">Languages</a>
-            <a class="nav-item nav-link" href="{% url 'core:ideas' %}">Ideas</a>
-            <a class="nav-item nav-link" href="{% url 'core:projects' %}">Projects</a>
+            <a class="nav-item nav-link {% if page == 'languages' %}active{% endif %}" href="{% url 'core:languages' %}">Languages{% if page == 'languages' %} <span class="sr-only">(current)</span>{% endif %}</a>
+            <a class="nav-item nav-link {% if page == 'ideas' %}active{% endif %}" href="{% url 'core:ideas' %}">Ideas{% if page == 'ideas' %} <span class="sr-only">(current)</span>{% endif %}</a>
+            <a class="nav-item nav-link {% if page == 'projects' %}active{% endif %}" href="{% url 'core:projects' %}">Projects{% if page == 'projects' %} <span class="sr-only">(current)<span>{% endif %}</a>
         </ul>
     </div>
 </nav>

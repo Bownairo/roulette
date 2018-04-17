@@ -1,9 +1,6 @@
 {% load bootstrap4 %}
 
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-{% bootstrap_messages %}
+{% include 'core/header.html' only %}
 
 <form method="post">
     {% csrf_token %}
@@ -13,3 +10,5 @@
     </button>
     {% endbuttons %}
 </form>
+
+{% include 'core/footer.html' %}

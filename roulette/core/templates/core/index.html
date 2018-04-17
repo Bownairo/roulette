@@ -1,9 +1,6 @@
 {% load bootstrap4 %}
 
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-{% bootstrap_messages %}
+{% include "core/header.html" only %}
 
 <h1>Roulette</h1>
 
@@ -25,3 +22,5 @@ Nicer pages<br>
 Embedded GitHub views<br>
 And more!<br>
 </p>
+
+{% include "core/footer.html" %}
