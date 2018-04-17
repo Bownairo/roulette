@@ -12,8 +12,12 @@
 {% bootstrap_button content='Update' button_type='link' href=update %}
 {% bootstrap_button content='Delete' button_type='link' href=delete %}
 
-<h1>{{ idea.name }}</h1>
+<br>
 
 {% if idea.thumbnail %}
-<img src="{{ idea.thumbnail.url }}">
+<img src="{{ idea.thumbnail.url }}" alt="thumb" height="500" width="500" class="img-thumbnail">
 {% endif %}
+
+<h1>{{ idea.name }}</h1>
+
+<p>{{ idea.description }}</p>
