@@ -5,10 +5,10 @@
 
 {% bootstrap_messages %}
 
-{% url 'core:projects' as back %}
+{% url 'core:projects' as projects %}
 {% url 'core:project-update' project.id as update %}
 {% url 'core:project-delete' project.id as delete %}
-{% bootstrap_button content='Back' button_type='link' button_class='btn-primary' href=back %}
+{% bootstrap_button content='Projects' button_type='link' button_class='btn-primary' href=projects %}
 {% bootstrap_button content='Update' button_type='link' button_class='btn-primary' href=update %}
 {% bootstrap_button content='Delete' button_type='link' button_class='btn-primary' href=delete %}
 

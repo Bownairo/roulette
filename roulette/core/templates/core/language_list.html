@@ -5,9 +5,9 @@
 
 {% bootstrap_messages %}
 
-{% url 'core:index' as back %}
+{% url 'core:index' as home %}
 {% url 'core:language-add' as add %}
-{% bootstrap_button content='Back' button_type='link' button_class='btn-primary' href=back %}
+{% bootstrap_button content='Home' button_type='link' button_class='btn-primary' href=home %}
 {% bootstrap_button content='Add' button_type='link' button_class='btn-primary' href=add %}
 
 <div class="list-group">
