@@ -21,3 +21,7 @@
 <h1>{{ language.name }}</h1>
 
 <p>{{ langauge.description }}</p>
+
+{% if language.url %}
+<a href="{{ language.url }}">More...</a>
+{% endif %}

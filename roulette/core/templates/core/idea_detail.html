@@ -21,3 +21,7 @@
 <h1>{{ idea.name }}</h1>
 
 <p>{{ idea.description }}</p>
+
+{% if idea.url %}
+<a href="{{ idea.url }}">More...</a>
+{% endif %}
