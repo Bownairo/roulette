@@ -1,6 +1,7 @@
 {% load bootstrap4 %}
 
-{% include 'core/header.html' only %}
+{% url 'core:idea-update' idea.id as modify %}
+{% include 'core/header.html' with modify=modify only %}
 
 <div class="container">
     <div class="row">

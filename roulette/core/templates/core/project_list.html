@@ -1,6 +1,7 @@
 {% load bootstrap4 %}
 
-{% include 'core/header.html' with page='projects' only %}
+{% url 'core:project-add' as add %}
+{% include 'core/header.html' with page='projects' add=add only %}
 
 <div class="container">
     {% for project in project_list %}

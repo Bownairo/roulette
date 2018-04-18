@@ -28,5 +28,7 @@
             <a class="nav-item nav-link {% if page == 'ideas' %}active{% endif %}" href="{% url 'core:ideas' %}">Ideas{% if page == 'ideas' %} <span class="sr-only">(current)</span>{% endif %}</a>
             <a class="nav-item nav-link {% if page == 'projects' %}active{% endif %}" href="{% url 'core:projects' %}">Projects{% if page == 'projects' %} <span class="sr-only">(current)<span>{% endif %}</a>
         </ul>
+        {% if add %}<a class="btn btn-outline-secondary role=button" href="{{ add }}">Add</a>{% endif %}
+        {% if modify %}<a class="btn btn-outline-secondary role=button" href="{{ modify }}">Modify</a>{% endif %}
     </div>
 </nav>

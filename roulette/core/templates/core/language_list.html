@@ -1,6 +1,7 @@
 {% load bootstrap4 %}
 
-{% include 'core/header.html' with page='languages' only %}
+{% url 'core:language-add' as add %}
+{% include 'core/header.html' with page='languages' add=add only %}
 
 <div class="container">
     {% for language in language_list %}

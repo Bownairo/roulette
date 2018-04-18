@@ -1,6 +1,7 @@
 {% load bootstrap4 %}
 
-{% include 'core/header.html' with page='ideas' only %}
+{% url 'core:idea-add' as add %}
+{% include 'core/header.html' with page='ideas' add=add only %}
 
 
 <div class="container">
