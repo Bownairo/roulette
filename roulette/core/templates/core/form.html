@@ -2,14 +2,20 @@
 
 {% include 'core/header.html' only %}
 
-<form enctype="multipart/form-data" method="post">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% buttons %}
-    <button type="submit" class="btn btn-primary">
-    Submit
-    </button>
-    {% endbuttons %}
-</form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <form enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary">
+                Submit
+                </button>
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
+</div>
 
 {% include 'core/footer.html' %}

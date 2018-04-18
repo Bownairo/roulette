@@ -2,13 +2,20 @@
 
 {% include 'core/header.html' only %}
 
-<form method="post">
-    {% csrf_token %}
-    {% buttons %}
-    <button type="submit" class="btn btn-primary">
-    Delete
-    </button>
-    {% endbuttons %}
-</form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <h1>Are you sure you want to delete?</h1>
+            <form method="post">
+                {% csrf_token %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary">
+                Delete
+                </button>
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
+</div>
 
 {% include 'core/footer.html' %}
