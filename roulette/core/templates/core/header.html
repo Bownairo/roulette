@@ -6,7 +6,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="{% static 'core/theme.css' %}"/>
         <title>Roulette</title>
     </head>
     <body>
@@ -16,7 +15,7 @@
 
 {% bootstrap_messages %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="{% url 'core:index' %}">Roulette</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,7 +27,7 @@
             <a class="nav-item nav-link {% if page == 'ideas' %}active{% endif %}" href="{% url 'core:ideas' %}">Ideas{% if page == 'ideas' %} <span class="sr-only">(current)</span>{% endif %}</a>
             <a class="nav-item nav-link {% if page == 'projects' %}active{% endif %}" href="{% url 'core:projects' %}">Projects{% if page == 'projects' %} <span class="sr-only">(current)<span>{% endif %}</a>
         </ul>
-        {% if add %}<a class="btn btn-outline-secondary role=button" href="{{ add }}">Add</a>{% endif %}
-        {% if modify %}<a class="btn btn-outline-secondary role=button" href="{{ modify }}">Modify</a>{% endif %}
+        {% if add %}<a class="btn btn-secondary role=button" href="{{ add }}">Add</a>{% endif %}
+        {% if modify %}<a class="btn btn-secondary role=button" href="{{ modify }}">Modify</a>{% endif %}
     </div>
 </nav>
