@@ -2,17 +2,16 @@
 
 {% include 'core/header.html' with page='languages' only %}
 
-{% url 'core:index' as home %}
-{% url 'core:language-add' as add %}
-{% bootstrap_button content='Home' button_type='link' button_class='btn-primary' href=home %}
-{% bootstrap_button content='Add' button_type='link' button_class='btn-primary' href=add %}
-
-<div class="list-group">
-{% for language in language_list %}
-    <a class="list-group-item" href="{% url 'core:language' language.id %}"/>{% if language.thumbnail %}<img src="{{ language.thumbnail.url }}" alt="thumb" height="100" width="100" class="img-thumbnail">{% endif %} {{ language.name }}</a>
-{% empty %}
-    <div>No languages.</div>
-{% endfor %}
+<div class="container">
+    {% for language in language_list %}
+    <div class="row justify-content-center">
+        <div class="col">
+            <a class="list-group-item" href="{% url 'core:language' language.id %}"/>{% if language.thumbnail %}<img src="{{ language.thumbnail.url }}" alt="thumb" height="100" width="100" class="img-thumbnail">{% endif %} {{ language.name }}</a>
+        </div>
+    </div>
+    {% empty %}
+    <h1>No languages.</h1>
+    {% endfor %}
 </div>
 
 {% include 'core/footer.html' %}

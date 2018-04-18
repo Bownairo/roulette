@@ -2,17 +2,17 @@
 
 {% include 'core/header.html' with page='ideas' only %}
 
-{% url 'core:index' as home %}
-{% url 'core:idea-add' as add %}
-{% bootstrap_button content='Home' button_type='link' button_class='btn-primary' href=home %}
-{% bootstrap_button content='Add' button_type='link' button_class='btn-primary' href=add %}
 
-<div class="list-group">
-{% for idea in idea_list %}
-    <a class="list-group-item" href="{% url 'core:idea' idea.id %}"/>{% if idea.thumbnail %}<img src="{{ idea.thumbnail.url }}" alt="thumb" height="100" width="100" class="img-thumbnail">{% endif %} {{ idea.name }}</a>
-{% empty %}
-    <div>No ideas.</div>
-{% endfor %}
+<div class="container">
+    {% for idea in idea_list %}
+    <div class="row justify-content-center">
+        <div class="col">
+            <a class="list-group-item" href="{% url 'core:idea' idea.id %}"/>{% if idea.thumbnail %}<img src="{{ idea.thumbnail.url }}" alt="thumb" height="100" width="100" class="img-thumbnail">{% endif %} {{ idea.name }}</a>
+        </div>
+    </div>
+    {% empty %}
+    <h1>No ideas.</h1>
+    {% endfor %}
 </div>
 
 {% include 'core/footer.html' %}
