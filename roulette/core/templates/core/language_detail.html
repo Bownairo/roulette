@@ -2,25 +2,37 @@
 
 {% include 'core/header.html' only %}
 
-{% url 'core:languages' as languages %}
-{% url 'core:language-update' language.id as update %}
-{% url 'core:language-delete' language.id as delete %}
-{% bootstrap_button content='Languages' button_type='link' button_class='btn-primary' href=languages %}
-{% bootstrap_button content='Update' button_type='link' button_class='btn-primary' href=update %}
-{% bootstrap_button content='Delete' button_type='link' button_class='btn-primary' href=delete %}
-
-<br>
-
-{% if language.thumbnail %}
-<img src="{{ language.thumbnail.url }}" alt="thumb" height="500" width="500" class="rounded">
-{% endif %}
-
-<h1>{{ language.name }}</h1>
-
-<p>{{ language.description }}</p>
-
-{% if language.url %}
-<a href="{{ language.url }}">More...</a>
-{% endif %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row align-items-center">
+                        {% if language.thumbnail %}
+                        <div class="col">
+                            <img src="{{ language.thumbnail.url }}" alt="thumb" class="rounded img-fluid">
+                        </div>
+                        {% endif %}
+                        <div class="col">
+                            <h1 class="display-4">{{ language.name }}</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>{{ language.description }}</p>
+                        </div>
+                    </div>
+                    {% if language.url %}
+                    <div class="row">
+                        <div class="col">
+                            <a href="{{ language.url }}">More...</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% include 'core/footer.html' %}

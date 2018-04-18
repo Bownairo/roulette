@@ -2,25 +2,37 @@
 
 {% include 'core/header.html' only %}
 
-{% url 'core:ideas' as ideas %}
-{% url 'core:idea-update' idea.id as update %}
-{% url 'core:idea-delete' idea.id as delete %}
-{% bootstrap_button content='Ideas' button_type='link' button_class='btn-primary' href=ideas %}
-{% bootstrap_button content='Update' button_type='link' button_class='btn-primary' href=update %}
-{% bootstrap_button content='Delete' button_type='link' button_class='btn-primary' href=delete %}
-
-<br>
-
-{% if idea.thumbnail %}
-<img src="{{ idea.thumbnail.url }}" alt="thumb" height="500" width="500" class="rounded">
-{% endif %}
-
-<h1>{{ idea.name }}</h1>
-
-<p>{{ idea.description }}</p>
-
-{% if idea.url %}
-<a href="{{ idea.url }}">More...</a>
-{% endif %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row align-items-center">
+                        {% if idea.thumbnail %}
+                        <div class="col">
+                            <img src="{{ idea.thumbnail.url }}" alt="thumb" class="rounded img-fluid">
+                        </div>
+                        {% endif %}
+                        <div class="col">
+                            <h1 class="display-4">{{ idea.name }}</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>{{ idea.description }}</p>
+                        </div>
+                    </div>
+                    {% if idea.url %}
+                    <div class="row">
+                        <div class="col">
+                            <a href="{{ idea.url }}">More...</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% include 'core/footer.html' %}
